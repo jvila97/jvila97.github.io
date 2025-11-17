@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marxa d'Hospitalet Del Infante</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/marxa-css.css">
+    <style>
+        /* Estils per igualar les imatges sense perdre qualitat */
+        .card-img-top {
+            height: 200px; /* Altura fixa per totes les imatges de les cards */
+            object-fit: cover; /* Manté la proporció i cobreix l'àrea sense distorsionar */
+            width: 100%; /* Assegura que s'ajusti a l'amplada de la card */
+        }
+        .carousel-item img {
+            height: 400px; /* Altura fixa per les imatges del carrusel */
+            object-fit: cover; /* Manté la proporció */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Marxa d'Hospitalet Del Infante</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#formulari">Formulari</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacte">Contacte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mapes">Mapes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fotos">Fotos</a>
+                    </li>
+                </ul>
+                <a href="#formulari" class="btn btn-primary">Inscriure’s</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center">
+        <div class="container">
+            <h1 class="display-4">Marxa d'Hospitalet Del Infante</h1>
+            <p class="lead">Uneix-te a la nostra marxa anual per Hospitalet Del Infante i gaudeix de la natura i la gastronomia local.</p>
+            <a href="#formulari" class="btn btn-primary btn-lg">Inscriure’s</a>
+        </div>
+    </section>
+
+    <!-- Formulari d'Inscripció -->
+    <section id="formulari" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Formulari d'Inscripció</h2>
+            <form>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="nom" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="nom" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="cognoms" class="form-label">Cognoms</label>
+                        <input type="text" class="form-control" id="cognoms" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="telefon" class="form-label">Telèfon</label>
+                        <input type="tel" class="form-control" id="telefon" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="ruta" class="form-label">Selecció de Ruta</label>
+                    <select class="form-select" id="ruta" required>
+                        <option value="">Selecciona una ruta</option>
+                        <option value="llarga">Ruta Llarga</option>
+                        <option value="curta">Ruta Curta</option>
+                    </select>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="dinar">
+                    <label class="form-check-label" for="dinar">Es queda a dinar?</label>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="condicions" required>
+                    <label class="form-check-label" for="condicions">Accepto les condicions</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contacte -->
+    <section id="contacte" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Contacte</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Informació de Contacte</h5>
+                            <p class="card-text">Adreça: Carrer Major, 45, Hospitalet Del Infante</p>
+                            <p class="card-text">Telèfon: +34 977 123 456</p>
+                            <p class="card-text">Email: info@marxahospitalet.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Envia un Missatge</h5>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="missatgeNom" class="form-label">Nom</label>
+                                    <input type="text" class="form-control" id="missatgeNom" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="missatgeEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="missatgeEmail" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="missatgeText" class="form-label">Missatge</label>
+                                    <textarea class="form-control" id="missatgeText" rows="3" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapes -->
+    <section id="mapes" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Mapes</h2>
+            <ul class="nav nav-tabs" id="mapTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="llarga-tab" data-bs-toggle="tab" data-bs-target="#llarga" type="button" role="tab" aria-controls="llarga" aria-selected="true">Ruta Llarga</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="curta-tab" data-bs-toggle="tab" data-bs-target="#curta" type="button" role="tab" aria-controls="curta" aria-selected="false">Ruta Curta</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="mapTabContent">
+                <div class="tab-pane fade show active" id="llarga" role="tabpanel" aria-labelledby="llarga-tab">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d6023.343927471!2d0.9156402299262475!3d40.98866338541269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e2!4m3!3m2!1d40.9925194!2d0.9212243!4m3!3m2!1d40.991516499999996!2d0.9146485!4m3!3m2!1d40.9878486!2d0.9289801999999999!4m5!1s0x12a1408a48dd0957%3A0xc3f06051403b7a98!2sBeach%20Resort%20La%20Margarita%2C%20Carrer%20del%20Torn%2C%20L&#39;Hospitalet%20de%20l&#39;Infant!3m2!1d40.985393699999996!2d0.9095291!5e0!3m2!1ses!2ses!4v1763366250133!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="curta" role="tabpanel" aria-labelledby="curta-tab">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d6023.121613877953!2d0.9173835647852591!3d40.99109699481404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e2!4m5!1s0x12a1407bebb9b271%3A0x542c2d0dcabc8f6!2sCentre%20de%20Telecomunicaciones%20de%20Catalunya%2C%20Carrer%20d&#39;Hifrensa%2C%200%20S%20N%2C%2043890%20L&#39;Hospitalet%20de%20l&#39;Infant%2C%20Tarragona!3m2!1d40.991515799999995!2d0.9146487999999999!4m5!1s0x12a1411194c4768f%3A0x382abc933c7fadc9!2sRestaurant%20Capit%C3%A1n!3m2!1d40.9895455!2d0.9205582!4m5!1s0x12a14060f575ce9b%3A0x5ad4df5ffa39d3f6!2sHotel%20Sancho!3m2!1d40.992529499999996!2d0.9232199!4m5!1s0x12a14061e46ea685%3A0xe70fbf51d435f599!2sCl%C3%ADnica%20Veterin%C3%A0ria%20Marcel!3m2!1d40.995086!2d0.9207765!4m5!1s0x12a1407c9b767f83%3A0xddbdc8d72c12cf30!2sAlberg%20Esportiu%20%C3%80ster!3m2!1d40.992291699999996!2d0.9148162!5e0!3m2!1ses!2ses!4v1763366491429!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menú -->
+    <section id="menu" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Menú</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/img/fideua.jpg" class="card-img-top" alt="Plat 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Fideua amb all i oli</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/img/suquet.webp" class="card-img-top" alt="Plat 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Suquet de peix y marisc</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/img/escalivada.jpg" class="card-img-top" alt="Plat 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Escalivada</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/img/mel.jpg" class="card-img-top" alt="Mel i Mató">
+                        <div class="card-body">
+                            <h5 class="card-title">Mel i Mató</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fotos -->
+    <section id="fotos" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Fotos</h2>
+            <div id="carouselFotos" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselFotos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselFotos" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselFotos" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/hospi1.jpg" class="d-block w-100" alt="Foto 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/hospi2.jpg" class="d-block w-100" alt="Foto 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/hospi3.jpg" class="d-block w-100" alt="Foto 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFotos" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselFotos" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 Marxa d'Hospitalet Del Infante. Tots els drets reservats.</p>
+                    <p>Adreça: Carrer Major, 45, Hospitalet Del Infante</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
